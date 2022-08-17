@@ -9,6 +9,9 @@ export default function Topbar({ menuOpen, setMenuOpen }) {
                     <a href="https://www.linkedin.com/in/michael-chau-1b646b1a4/" target="_blank" rel="noreferrer" className="linkedin">
                         <img src="assets/linkedin2.png" alt=""/>
                     </a>
+                    <a href="https://github.com/MichaelPhuc" target="_blank" rel="noreferrer" className="github">
+                        <img src="assets/github.png" alt=""/>
+                    </a>
                 </div>
                 
                 <div className="right">
