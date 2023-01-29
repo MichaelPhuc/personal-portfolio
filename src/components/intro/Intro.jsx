@@ -18,7 +18,7 @@ export default function Intro() {
                 <div className="wrapper">
                     <h2>Hi! My Name is</h2>
                     <h1>Michael Chau</h1>
-                    <h3>Junior
+                    <h3>
                         <span>
                         
                             <Typewriter 
