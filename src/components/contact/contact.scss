@@ -1,95 +1,131 @@
 @import "../../global.scss";
 
 .contact {
-    background-color: #EEEDE7;
+  background-color: #eeede7;
+  display: flex;
+
+  @include mobile {
+    flex-direction: column;
+  }
+  .left {
+    flex: 1;
+    overflow: hidden;
+    @include mobile {
+
+      margin-bottom: -45vh;
+    }
+    .container-sm {
+      width: 100%;
+      height: 75%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 15vw;
+
+      @include mobile {
+        text-align: center;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+      
+      }
+    }
+    h1 {
+      color: #278ab0;
+      text-shadow: 1px 1px #111111;
+    }
+    h2 {
+      margin-bottom: 10px;
+    }
+    p {
+      width: 20vw;
+      @include mobile {
+        width: auto;
+        margin-bottom: 25vh;
+      }
+    }
+  }
+
+  .right {
+    flex: 1;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-    
-
-    @include mobile{
-        flex-direction: column;
+    @include mobile {
+      margin-bottom: 10vh;
     }
-    .left{
-        flex: 1;
-        overflow: hidden;
-        
-        img{
-            height: 80%;
-            margin-left: 90px;
-            @include mobile{
-                margin-left: 10px;
-                margin-top: 20px;
-            }
-        }
+    h2 {
+      font-size: 30px;
+    }
+    h5 {
+      font-size: 16px;
+      margin-top: 30px;
+      margin-bottom: -5px;
     }
 
-    .right{
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-right: 9vw;
 
-        h2{
-            font-size: 30px;
-        }
-        
-        form{
-            width: 70%;
-            height: 70%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            
+      @include mobile {
+        margin-right: 0;
+        //margin-bottom: 10vh;
+      }
+      .input-group {
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-sizing: border-box;
 
-            
-            input{
-                width: 300px;
-                height: 50px;
-                font-size: 14px;
-                display: block;
-                border: 1px solid #ccc;
-                border-radius: 4px;
-                box-sizing: border-box;
-                margin: 10px;
-
-                @include mobile{
-                    width: 200px;
-                    height: 30px;
-                }
-                
-            }
-            textarea{
-                width: 300px;
-                height: 200px;
-                font-size: 14px;
-                display:block;
-                border: 1px solid #ccc;
-                border-radius: 4px;
-                box-sizing: border-box;
-                margin: 10px;
-                
-
-                @include mobile{
-                    width: 200px;
-                    height: 60px;
-                }
-            }
-
-            button{
-                width: 150px;
-                height: 30px;
-                color: white;
-                background-color: #278AB0;
-                border: none;
-                border-radius: 10px;
-                font-weight: 500;
-                cursor: pointer;
-            }
+        .input-group-text {
+          background-color: white;
+          border-radius: 0px;
+          border: 0;
         }
 
-        span{
-            color: green;
+        input {
+          width: 35vw;
+          font-size: 14px;
+          border: 0;
+          @include mobile {
+       
+            width: 65vw;
+          }
         }
+        input:focus {
+          outline: none;
+        }
+
+        textarea {
+          padding: 10px;
+          width: 37vw;
+          height: 200px;
+          font-size: 14px;
+          border: none;
+          overflow: auto;
+          outline: none;
+
+          resize: none; /*remove the resize handle on the bottom right*/
+
+          @include mobile {
+            height: 90px;
+            width: 75vw;
+          }
+        }
+      }
+
+      button {
+        width: 150px;
+        height: 50px;
+        color: white;
+        background-color: #278ab0;
+        margin-top: 10px;
+        border-radius: 2px;
+      }
     }
+  }
 }
