@@ -51,6 +51,7 @@ export default function Portfolio() {
           />
         ))}
       </ul>
+      
       <div className="container">
         {data.map((d) => (
           <div className="item">
