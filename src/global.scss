@@ -1,5 +1,15 @@
 $mainColor: #1c4670;
 
+// Media Queries
+
+$tablet-width: 1023px;
+
+@mixin tablet {
+    @media (max-width: #{$tablet-width}) and (min-width: #{$width}){
+        @content
+    }
+};
+
 $width: 768px;
 
 @mixin mobile {
@@ -7,3 +17,4 @@ $width: 768px;
     @content;
   }
 }
+

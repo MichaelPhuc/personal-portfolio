@@ -1,9 +1,13 @@
 import "./intro.scss";
-
+import Contact from "../contact/Contact";
+import Portfolio from "../portfolio/Portfolio";
 import Typewriter from "typewriter-effect";
 
 export default function Intro() {
   return (
+    <div className="sections">
+
+
     <div className="intro" id="intro">
       <div className="left">
         <div className="imgContainer">
@@ -31,6 +35,13 @@ export default function Intro() {
           <img src="assets/down.png" alt="" />
         </a>
       </div>
+
+    </div>
+
+          <Portfolio />
+          <Contact />
+
+       
     </div>
   );
 }

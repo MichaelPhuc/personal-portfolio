@@ -1,0 +1,222 @@
+@import "../../global.scss";
+
+.study {
+  // Top 1on1 image
+  .intro-grid {
+    height: 50vh;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    background-color: lightblue;
+    position: relative;
+    overflow: hidden;
+    background-image: url("../../../public/assets/frame3.png");
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+
+    .blur {
+      .logo {
+        position: relative;
+        margin-top: 120px;
+        z-index: 2;
+        background-color: rgba(256, 256, 256, 0.5);
+
+        @include mobile {
+          width: 475px;
+        }
+      }
+    }
+  }
+  // Project Overview
+  .overview-grid {
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    background-color: #fdf4e3;
+
+    .mockup1 {
+      max-width: 700px;
+      max-height: 600px;
+      width: auto;
+      height: auto;
+      @include mobile {
+        max-height: 500px;
+      }
+      @include tablet {
+        max-height: 500px;
+      }
+    }
+    .main-head,
+    .section-head,
+    p {
+      text-align: left;
+      margin: 0px 3vw;
+
+      @include mobile {
+        margin: 0 20px;
+      }
+
+      @include tablet {
+        margin: 0px 20px;
+      }
+    }
+    .main-head {
+      font-size: 64px;
+    }
+    h2 {
+      font-size: 24px;
+    }
+  }
+  // Right side overview - Problem and Goals
+
+  .overview-grid-right {
+    height: 100vh;
+    width: 100%;
+    text-align: left;
+    background-color: #fdf4e3;
+
+    @include mobile {
+      margin: 0px 0px;
+      
+      height: 100%;
+    }
+
+    a {
+      float: right;
+      margin: 0px 3vw;
+      text-decoration: none;
+
+      @include mobile {
+        margin: 0 20px;
+      }
+
+      @include tablet {
+        margin: 0px 50px;
+      }
+    }
+
+    p,
+    .section-head2,
+    dl {
+      text-align: left;
+      margin: 0px 3vw;
+
+      @include mobile {
+        margin: 0px 20px;
+      }
+
+      @include tablet {
+        margin: 0px 0px;
+      }
+    }
+    .section-head2 {
+      margin-top: 27px;
+    }
+    .goals {
+      margin-top: 50px;
+    }
+  }
+
+  .research-grid {
+    height: 50vh;
+    background-color: tan;
+  }
+
+  //User Persona Section
+  .persona-grid {
+    height: 70vh;
+    background-color: #fcefd6;
+    @include mobile {
+      height: 100%;
+    }
+    @include tablet {
+      height: 100%;
+    }
+ 
+    .user-head {
+      margin-top: 50px;
+      margin-left: 4vw;
+      @include mobile {
+        margin-left: 6vw;
+      }
+    }
+    .username {
+      font-weight: 700;
+      font-size: 20px;
+    }
+
+ 
+    .persona {
+      margin: 0px 4vw;
+
+      @include mobile {
+        margin: 0px 17px 0px 35px;
+      }
+
+      .persona-james {
+        margin-top: 95px;
+
+        @include mobile {
+          margin-top: 0px;
+        }
+        @include tablet {
+          margin-top: 100px;
+        }
+      }
+
+      .userinfo {
+        float: left;
+        margin-top: 100px;
+
+        @include mobile {
+          float: none;
+          margin-top: 50px;
+        }
+
+        @include tablet {
+          float: none;
+          margin-top: 50px;
+        }
+      }
+
+      .persona-image {
+        float: left;
+        margin-top: 50px;
+        height: auto;
+        width: 200px;
+        border-radius: 50%;
+
+        @include mobile {
+          margin-top: 0px;
+        }
+
+        @include tablet {
+          margin-top: 0px;
+        }
+      }
+
+      .summary {
+        margin-top: 20px;
+      }
+    }
+  }
+  .userflow-grid {
+    background-color: #fdf4e3;
+    height: 50vh;
+
+    .userflow-head {
+      margin: 0px 3vw;
+    }
+    .userflow {
+      width: 95vw;
+      height: auto;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      @include mobile {
+        width: 475px;
+      }
+    }
+  }
+}

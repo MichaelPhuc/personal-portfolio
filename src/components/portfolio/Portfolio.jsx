@@ -1,73 +1,96 @@
-import PortfolioList from "../portfolioList/PortfolioList";
+
 import "./portfolio.scss";
-import { useEffect, useState } from "react";
-import { webPortfolio, mobilePortfolio, spacePortfolio } from "../../data";
+import { webPortfolio, mobilePortfolio, spacePortfolio, massagePortfolio } from "../../data";
+import Grid from "@material-ui/core/Grid";
+import { Link } from "react-router-dom";
 
 export default function Portfolio() {
-  const [selected, setSelected] = useState("featured");
-  const [data, setData] = useState([]);
 
-  const list = [
-    {
-      id: "space",
-      title: "Space Web App",
-    },
-    {
-      id: "mobile",
-      title: "Mobile App",
-    },
-    {
-      id: "web",
-      title: "Web App",
-    },
-  ];
-
-  useEffect(() => {
-    switch (selected) {
-      case "space":
-        setData(spacePortfolio);
-        break;
-      case "mobile":
-        setData(mobilePortfolio);
-        break;
-      case "web":
-        setData(webPortfolio);
-        break;
-      default:
-        setData(spacePortfolio);
-    }
-  }, [selected]);
 
   return (
     <div className="portfolio" id="portfolio">
       <h1>Portfolio</h1>
-      <ul>
-        {list.map((item) => (
-          <PortfolioList
-            title={item.title}
-            active={selected === item.id}
-            setSelected={setSelected}
-            id={item.id}
-          />
-        ))}
-      </ul>
-      
-      <div className="container">
-        {data.map((d) => (
-          <div className="item">
-            <a href={d.link} target="_blank" rel="noreferrer">
-              <h3>{d.title}</h3>
-              <img src={d.img} alt="" />
-            </a>
-          </div>
-        ))}
-        <div className="text-container">
-          <h3>About this project</h3>
-          {data.map((d) => (
-            <p>{d.text}</p>
+
+      <Grid container>
+        <Grid
+          container
+          spacing={0}
+          direction="column"
+          alignItems="center"
+          item
+          lg={6}
+          sm={6}
+          xs={12}
+        >
+          {massagePortfolio.map((d) => (
+            <div className="item left">
+              <Link target="_blank" to="/study">
+                <h3>{d.title}</h3>
+                <img src={d.img} alt="" />
+              </Link>
+            </div>
           ))}
-        </div>
-      </div>
+        </Grid>
+        <Grid
+          container
+          spacing={0}
+          direction="column"
+          alignItems="center"
+          item
+          lg={6}
+          sm={6}
+          xs={12}
+        >
+          {spacePortfolio.map((d) => (
+            <div className="item right">
+              <a href={d.link} target="_blank" rel="noreferrer">
+                <h3>{d.title}</h3>
+                <img src={d.img} alt="" />
+              </a>
+            </div>
+          ))}
+        </Grid>
+
+        <Grid
+          container
+          spacing={0}
+          direction="column"
+          alignItems="center"
+          item
+          lg={6}
+          sm={6}
+          xs={12}
+        >
+          {mobilePortfolio.map((d) => (
+            <div className="item left">
+              <a href={d.link} target="_blank" rel="noreferrer">
+                <h3>{d.title}</h3>
+                <img src={d.img} alt="" />
+              </a>
+            </div>
+          ))}
+        </Grid>
+
+        <Grid
+          container
+          spacing={0}
+          direction="column"
+          alignItems="center"
+          item
+          lg={6}
+          sm={6}
+          xs={12}
+        >
+          {webPortfolio.map((d) => (
+            <div className="item right">
+              <a href={d.link} target="_blank" rel="noreferrer">
+                <h3>{d.title}</h3>
+                <img src={d.img} alt="" />
+              </a>
+            </div>
+          ))}
+        </Grid>
+      </Grid>
     </div>
   );
 }

@@ -5,9 +5,10 @@ export default function Topbar({ menuOpen, setMenuOpen }) {
     <div className={"topbar " + (menuOpen && "active")}>
       <div className="wrapper">
         <div className="left">
-          <a href="#intro" className="logo">
+          <a href="/" className="logo">
             michael chau
           </a>
+       
           <a
             href="https://www.linkedin.com/in/michael-chau-1b646b1a4/"
             target="_blank"
